@@ -3,27 +3,34 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A121917C26385FB10093448F /* PickleStatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A121917B26385FB10093448F /* PickleStatsApp.swift */; };
-		A121917E26385FB10093448F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A121917D26385FB10093448F /* ContentView.swift */; };
 		A121918026385FB10093448F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A121917F26385FB10093448F /* Assets.xcassets */; };
 		A121918326385FB10093448F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A121918226385FB10093448F /* Preview Assets.xcassets */; };
 		A121918526385FB20093448F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A121918426385FB20093448F /* Persistence.swift */; };
 		A121918826385FB20093448F /* PickleStats.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A121918626385FB20093448F /* PickleStats.xcdatamodeld */; };
+		A12191942638626A0093448F /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12191932638626A0093448F /* GamesView.swift */; };
+		A1219196263865A40093448F /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1219195263865A40093448F /* GameCell.swift */; };
+		A12191982638668F0093448F /* GameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12191972638668F0093448F /* GameExtension.swift */; };
+		A121919B263869F20093448F /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = A121919A263869F20093448F /* SFSafeSymbols */; };
+		A121919D26386A420093448F /* GameEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A121919C26386A420093448F /* GameEditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A121917826385FB10093448F /* PickleStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickleStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A121917B26385FB10093448F /* PickleStatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickleStatsApp.swift; sourceTree = "<group>"; };
-		A121917D26385FB10093448F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A121917F26385FB10093448F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A121918226385FB10093448F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A121918426385FB20093448F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		A121918726385FB20093448F /* PickleStats.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PickleStats.xcdatamodel; sourceTree = "<group>"; };
 		A121918926385FB20093448F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A12191932638626A0093448F /* GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
+		A1219195263865A40093448F /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		A12191972638668F0093448F /* GameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameExtension.swift; sourceTree = "<group>"; };
+		A121919C26386A420093448F /* GameEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A121919B263869F20093448F /* SFSafeSymbols in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +64,10 @@
 		A121917A26385FB10093448F /* PickleStats */ = {
 			isa = PBXGroup;
 			children = (
-				A121917B26385FB10093448F /* PickleStatsApp.swift */,
-				A121917D26385FB10093448F /* ContentView.swift */,
-				A121917F26385FB10093448F /* Assets.xcassets */,
-				A121918426385FB20093448F /* Persistence.swift */,
-				A121918926385FB20093448F /* Info.plist */,
-				A121918626385FB20093448F /* PickleStats.xcdatamodeld */,
+				A1219192263862220093448F /* App */,
+				A1219191263862140093448F /* CoreData */,
+				A121918F263862030093448F /* UI */,
+				A12191902638620D0093448F /* Misc */,
 				A121918126385FB10093448F /* Preview Content */,
 			);
 			path = PickleStats;
@@ -73,6 +79,43 @@
 				A121918226385FB10093448F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A121918F263862030093448F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A12191932638626A0093448F /* GamesView.swift */,
+				A1219195263865A40093448F /* GameCell.swift */,
+				A121919C26386A420093448F /* GameEditView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A12191902638620D0093448F /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				A121917F26385FB10093448F /* Assets.xcassets */,
+				A121918926385FB20093448F /* Info.plist */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		A1219191263862140093448F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A121918426385FB20093448F /* Persistence.swift */,
+				A121918626385FB20093448F /* PickleStats.xcdatamodeld */,
+				A12191972638668F0093448F /* GameExtension.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		A1219192263862220093448F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A121917B26385FB10093448F /* PickleStatsApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +134,9 @@
 			dependencies = (
 			);
 			name = PickleStats;
+			packageProductDependencies = (
+				A121919A263869F20093448F /* SFSafeSymbols */,
+			);
 			productName = PickleStats;
 			productReference = A121917826385FB10093448F /* PickleStats.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +164,9 @@
 				Base,
 			);
 			mainGroup = A121916F26385FB10093448F;
+			packageReferences = (
+				A1219199263869F20093448F /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
+			);
 			productRefGroup = A121917926385FB10093448F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,10 +193,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1219196263865A40093448F /* GameCell.swift in Sources */,
 				A121918526385FB20093448F /* Persistence.swift in Sources */,
-				A121917E26385FB10093448F /* ContentView.swift in Sources */,
 				A121917C26385FB10093448F /* PickleStatsApp.swift in Sources */,
+				A12191942638626A0093448F /* GamesView.swift in Sources */,
 				A121918826385FB20093448F /* PickleStats.xcdatamodeld in Sources */,
+				A121919D26386A420093448F /* GameEditView.swift in Sources */,
+				A12191982638668F0093448F /* GameExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +388,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A1219199263869F20093448F /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/piknotech/SFSafeSymbols";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A121919A263869F20093448F /* SFSafeSymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1219199263869F20093448F /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			productName = SFSafeSymbols;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A121918626385FB20093448F /* PickleStats.xcdatamodeld */ = {

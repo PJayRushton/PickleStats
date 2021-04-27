@@ -13,7 +13,7 @@ struct PickleStatsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GamesView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

@@ -17,6 +17,8 @@
 		A12191982638668F0093448F /* GameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12191972638668F0093448F /* GameExtension.swift */; };
 		A121919B263869F20093448F /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = A121919A263869F20093448F /* SFSafeSymbols */; };
 		A121919D26386A420093448F /* GameEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A121919C26386A420093448F /* GameEditView.swift */; };
+		A1417E2A26386D6F00AC6BFC /* GameCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417E2926386D6F00AC6BFC /* GameCoreDataManager.swift */; };
+		A1417E2C2638714A00AC6BFC /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417E2B2638714A00AC6BFC /* GameDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		A1219195263865A40093448F /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		A12191972638668F0093448F /* GameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameExtension.swift; sourceTree = "<group>"; };
 		A121919C26386A420093448F /* GameEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEditView.swift; sourceTree = "<group>"; };
+		A1417E2926386D6F00AC6BFC /* GameCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoreDataManager.swift; sourceTree = "<group>"; };
+		A1417E2B2638714A00AC6BFC /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 			children = (
 				A12191932638626A0093448F /* GamesView.swift */,
 				A1219195263865A40093448F /* GameCell.swift */,
+				A1417E2B2638714A00AC6BFC /* GameDetailView.swift */,
 				A121919C26386A420093448F /* GameEditView.swift */,
 			);
 			path = UI;
@@ -103,9 +108,10 @@
 		A1219191263862140093448F /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				A1417E2926386D6F00AC6BFC /* GameCoreDataManager.swift */,
+				A12191972638668F0093448F /* GameExtension.swift */,
 				A121918426385FB20093448F /* Persistence.swift */,
 				A121918626385FB20093448F /* PickleStats.xcdatamodeld */,
-				A12191972638668F0093448F /* GameExtension.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -197,7 +203,9 @@
 				A121918526385FB20093448F /* Persistence.swift in Sources */,
 				A121917C26385FB10093448F /* PickleStatsApp.swift in Sources */,
 				A12191942638626A0093448F /* GamesView.swift in Sources */,
+				A1417E2A26386D6F00AC6BFC /* GameCoreDataManager.swift in Sources */,
 				A121918826385FB20093448F /* PickleStats.xcdatamodeld in Sources */,
+				A1417E2C2638714A00AC6BFC /* GameDetailView.swift in Sources */,
 				A121919D26386A420093448F /* GameEditView.swift in Sources */,
 				A12191982638668F0093448F /* GameExtension.swift in Sources */,
 			);
@@ -331,7 +339,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PickleStats/Preview Content\"";
 				DEVELOPMENT_TEAM = WK6LDT652Z;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PickleStats/Info.plist;
+				INFOPLIST_FILE = PickleStats/Misc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -353,7 +361,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PickleStats/Preview Content\"";
 				DEVELOPMENT_TEAM = WK6LDT652Z;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PickleStats/Info.plist;
+				INFOPLIST_FILE = PickleStats/Misc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

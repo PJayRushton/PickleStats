@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct PickleStatsApp: App {
+    
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
             GamesView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(\.managedObjectContext, persistenceController.viewContext)
         }
     }
 }

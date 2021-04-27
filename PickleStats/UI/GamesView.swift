@@ -25,7 +25,9 @@ struct GamesView: View {
     var body: some View {
         NavigationView {
             List(games) { game in
-                GameCell(game)
+                NavigationLink(destination: GameDetailView(game: game), label: {
+                    GameCell(game)
+                })
             }
             .navigationBarItems(trailing:
                                     Button(action: presentGameEditView, label: {
@@ -35,6 +37,7 @@ struct GamesView: View {
             .sheet(isPresented: $isShowingGameEdit, content: {
                 GameEditView(game: nil)
             })
+            .navigationTitle("Games")
         }
     }
     
@@ -42,6 +45,7 @@ struct GamesView: View {
 
 
 // MARK: - Private
+
 private extension GamesView {
     
     func presentGameEditView() {

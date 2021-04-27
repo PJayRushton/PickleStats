@@ -19,6 +19,8 @@ struct GameCell: View {
         HStack {
             Text(game.title ?? "")
             
+            Spacer()
+            
             if !game.isCompleted {
                 Text("In Progress")
                     .foregroundColor(.yellow)
